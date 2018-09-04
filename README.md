@@ -18,7 +18,7 @@
 $ make install
 ```
 ```sh
-$ make run
+$ make start
 ```
 - That is it! The project is running
 
