@@ -2,31 +2,7 @@
 
 ## Description
 
-
-## Technical specifications
-* Webpack
-* ES6
-* Pug
-* Sass
-* No CSS framework
-* No JavaScript framework
-
-## How to run the project
-- Clone the repository, switch to branch *challenge*
-- Inside the folder, run the following commands. You need to have (Node.js and Yarn/npm) installed.
-```sh
-$ make install
-```
-```sh
-$ make run
-```
-- That is it! The project is running
-
-## How to run the tests
-- Inside the folder, on branch *challenge*, run the following command
-```sh
-$ make test
-```
+You are on branch *challenge*, this branch is destinated only for source code, the project guidelines and build process are described on brach *master*
  
 ## License
 
