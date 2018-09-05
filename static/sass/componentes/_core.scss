@@ -2,6 +2,7 @@ $blue: #3498db;
 $blue-dark: #0d74b9;
 $gray: #848484;
 $gray-bg: #e7e7e7;
+$gray-border: #e5e5e5;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 //closest to Myriad Pro
@@ -14,6 +15,7 @@ $fm: 'Myriad Pro' , 'PT Sans', sans-serif;
 $desktop-width: 1200px;
 $header-width: 1000px;
 $tablet-width: 1024px;
+$feature-one-column: 714px;
 $mobile-width: 640px;
 
 .page{
@@ -56,7 +58,7 @@ $mobile-width: 640px;
 				li{
 					opacity: 0.5;
 					display: inline-block;
-					transition: all .5s ease-in-out;
+					transition: all .3s ease-in-out;
 					&:hover{
 						opacity: 1;
 					}
@@ -116,7 +118,7 @@ $mobile-width: 640px;
 		width: 100%;
 		max-width: $desktop-width;
 		margin: 0 auto;
-		padding: 60px 0 120px 0;
+		padding: 60px 0 60px 0;
 		&__header{
 			max-width: 1020px;
 			margin: 0 auto;
@@ -132,6 +134,79 @@ $mobile-width: 640px;
 				font-size: 16px;
 				line-height: 26px;
 				color: $gray;
+			}
+			@media screen and (max-width: $tablet-width){
+				h3{
+					font-size: 26px;
+					margin-bottom: 20px;
+				}
+				p{
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+		}
+		&__list{
+			margin-top: 50px;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			li{
+				width: 100%;
+				max-width: 320px;
+				text-align: center;
+				padding: 50px 0;
+				transition: all 0.2s ease-in-out;
+				&:nth-child(1), &:nth-child(2), &:nth-child(3),{
+					border-bottom: 1px solid $gray-border;
+				}
+				&:last-child{
+					border-bottom: none;
+				}
+				&:hover{
+					background: $gray-bg;
+				}
+				img{
+					display: inline-block;
+				}
+				h4{
+					font-family: $fm;
+					font-size: 24px;
+					font-weight: 700;
+					margin: 28px 0;
+				}
+				p{
+					font-family: $fh;
+					font-size: 16px;
+					line-height: 26px;
+					color: $gray;
+				}
+			}
+			@media screen and (max-width: $tablet-width){
+				li{
+					padding: 25px 0;
+					margin: 0 10px;
+					border-bottom: 1px solid $gray-border;
+					 &:nth-child(5),{
+						border-bottom: none;
+					}
+					h4{
+						font-size: 20px;
+						margin: 18px 0;
+					}
+					p{
+						font-size: 14px;
+						line-height: 24px;
+					}
+				}
+			}
+			@media screen and (max-width: $feature-one-column){
+				margin-top: 25px;
+				li{
+					 &:nth-child(5){
+						border-bottom: 1px solid $gray-border;
+					}
+				}
 			}
 		}
 	}
