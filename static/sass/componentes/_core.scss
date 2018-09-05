@@ -294,6 +294,13 @@ $mobile-width-small-devices: 460px;
 					}
 				}
 			}
+			@media screen and (max-width: $mobile-width){
+				&__video{
+					iframe{
+						height: 270px;
+					}
+				}
+			}
 			@media screen and (max-width: $mobile-width-small-devices){
 				&__video{
 					iframe{
