@@ -188,6 +188,9 @@ $mobile-width-small-devices: 460px;
 					 &:nth-child(5),{
 						border-bottom: none;
 					}
+					&:hover{
+						background: none;
+					}
 					h4{
 						font-size: 20px;
 						margin: 18px 0;
