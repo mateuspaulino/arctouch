@@ -18,7 +18,37 @@
       header.features__header
         h3 Craze Features
         p Lorem ipsum dolor sit amet, pro aeterno adipisci ex, pro no iriure accusam. Eros admodum intellegat ex mea, mei wisi nullam ne, qui cu aliquid nominavi. Est habemus maiestatis ut. Vim quod elitr interesset ea. 
-
+      - 
+        var featureObj = [{
+          icon: 'screen.png',
+          title: 'Flat Design',
+        },
+        {
+          icon: 'target.png',
+          title: 'Marketable',
+        },
+        {
+          icon: 'picture.png',
+          title: 'Edit Photos',
+        },
+        {
+          icon: 'colors.png',
+          title: 'Edit Colors',
+        },
+        {
+          icon: 'user.png',
+          title: 'User Friendly',
+        },
+        {
+          icon: 'settings.png',
+          title: '100% Editable',
+        }];
+      ul.features__list
+        -for(var x=0; x<featureObj.length; x++)
+          li
+            img(src="../img/icons/ui/"+featureObj[x].icon alt="Screen icon")
+            h4 #{featureObj[x].title}
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fringilla.
     section.feedback
       .feedback__carousel.carousel-container
   footer.footer
