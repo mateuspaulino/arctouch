@@ -1,9 +1,15 @@
-$blue: #00B6ED;
+$blue: #3498db;
+$blue-dark: #0d74b9;
+$gray: #848484;
+$gray-bg: #e7e7e7;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+//closest to Myriad Pro
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
 
 $fp: 'Pacifico', cursive;
 $fh: Helvetica , Arial, sans-serif;
+$fm: 'Myriad Pro' , 'PT Sans', sans-serif;
 
 $desktop-width: 1200px;
 $header-width: 1000px;
@@ -106,7 +112,29 @@ $mobile-width: 640px;
 			}
 		}
 	}
-	
+	.features{
+		width: 100%;
+		max-width: $desktop-width;
+		margin: 0 auto;
+		padding: 60px 0 120px 0;
+		&__header{
+			max-width: 1020px;
+			margin: 0 auto;
+			text-align: center;
+			h3{
+				font-family: $fm;
+				font-size: 30px;
+				font-weight: 700;
+				margin-bottom: 25px;
+			}
+			p{
+				font-family: $fh;
+				font-size: 16px;
+				line-height: 26px;
+				color: $gray;
+			}
+		}
+	}
 }
 
 
