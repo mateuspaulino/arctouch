@@ -62,21 +62,22 @@
             li.about__container__explanation__list__item #[img(src="../img/icons/bullet.png" alt="Bullet icon")] Lorem ipsum dolor sit amet consectetur elt
         .about__container__video
           iframe(src="https://player.vimeo.com/video/20385982?title=0&byline=0&portrait=0" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+          
     section.feedback
       .feedback__carousel
         .feedback__carousel__container
           - 
             var feedbackObj = [{
-              comment: '"Houston, we have a problem"',
-              author: 'John Swigert, Apollo 13',
+              comment: '"We can only see a sWe can only see a short distance ahead, but we can see plenty there that needs to be done."',
+              author: 'Alan Turing',
             },
             {
-              comment: '"With great power there must also come – great responsibility."',
-              author: 'Amazing Fantasy #15',
+              comment: '"The time is always right to do what is right."',
+              author: 'Martin Luther King Jr',
             },
             {
-              comment: '"I find your lack of faith disturbing."',
-              author: 'Darth Vader, Star Wars',
+              comment: '"I remember my mother\'s prayers and they have always followed me. They have clung to me all my life."',
+              author: 'Abraham Lincoln',
             },
             {
               comment: '"Try not. Do, or do not. There is no try."',
@@ -92,7 +93,6 @@
             -for(var i=0;i<feedbackObj.length;i++)
               -var active = i == 0 ? 'active':''
               li.feedback__carousel__container__dots__dot(data-index=i class=active)
-
 
     section.plans
       .plans__container
