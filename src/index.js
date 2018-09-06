@@ -1,8 +1,8 @@
 // import Carousel from './components/Carousel';
-import removeClass from './helpers/util';
+import removeClass,{binder} from './helpers/util';
 import './../static/sass/main.scss';
 
-async function init() {
+function init() {
 
   //bind querySelector
   const $ = document.querySelector.bind(document);
@@ -10,8 +10,8 @@ async function init() {
 
   //init variables
   let currentSlide = 0;
-  let automaticSlide = true;
-  let automaticInterval = setInterval(function(){goToNextSlide();}, 3300);
+  const timeOut = 4000;
+  let automaticInterval = setInterval(function(){goToNextSlide();}, timeOut);
 
   //DOM elements
   let slide = $$('.feedback__carousel__container__list__item');
@@ -21,7 +21,7 @@ async function init() {
 
   //Shows to the specific slide
   let slideSize = slide.length - 1;
-  let showSlide = (number) => {
+  const showSlide = (number) => {
     //value protection - it must be a number
     if(typeof number !== 'number') return false
 
@@ -41,16 +41,16 @@ async function init() {
   }
 
   //Go to the next slide
-  let goToNextSlide = () => {
+  const goToNextSlide = () => {
     showSlide(currentSlide + 1);
   }
 
   //Go to the previous slide
-  let goToPreviousSlide = () => {
+  const goToPreviousSlide = () => {
     showSlide(currentSlide - 1);
   }
 
-  let paintDot = (number) => {
+  const paintDot = (number) => {
      //value protection - it must be a number
      if(typeof number !== 'number') return false
 
@@ -64,9 +64,22 @@ async function init() {
      dot[number].classList.add('active');
   }
 
-  // Running tests
-  // goToNextSlide();
-  // showSlide(1);
+  //Click on dot
+  binder(
+    dot,
+    'click',
+    ({parent,currentTarget}) => {
+      //Stop automactic interval
+      clearInterval(automaticInterval);
+      
+      //Get dot's number
+      const index = Number(currentTarget.getAttribute('data-index'));
+
+      //Goes to the selected slide
+      showSlide(index); 
+    }
+  );
+
 }
 
 init();

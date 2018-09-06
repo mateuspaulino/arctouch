@@ -83,24 +83,15 @@
               author: 'Yoda, The Empire Strikes Back',
             }];
           ul.feedback__carousel__container__list
-            li.feedback__carousel__container__list__item.active
-              h4.feedback__carousel__container__list__item__comment 1
-              p.feedback__carousel__container__list__item__author Sarah Hunt
-            li.feedback__carousel__container__list__item
-              h4.feedback__carousel__container__list__item__comment 2
-              p.feedback__carousel__container__list__item__author Mateus Pauliasdasno
-            li.feedback__carousel__container__list__item
-              h4.feedback__carousel__container__list__item__comment 3
-              p.feedback__carousel__container__list__item__author Mateusaaa Paulino
-            li.feedback__carousel__container__list__item
-              h4.feedback__carousel__container__list__item__comment 4
-              p.feedback__carousel__container__list__item__author Mateus aaaPaulino
-          ul.feedback__carousel__container__dots
             -for(var x=0;x<feedbackObj.length;x++)
-              if(x==0)
-                li.feedback__carousel__container__dots__dot.active 
-              else
-                li.feedback__carousel__container__dots__dot
+              -var active = x == 0 ? 'active':''
+              li.feedback__carousel__container__list__item(class=active)
+                h4.feedback__carousel__container__list__item__comment #{feedbackObj[x].comment}
+                p.feedback__carousel__container__list__item__author #{feedbackObj[x].author}
+          ul.feedback__carousel__container__dots
+            -for(var i=0;i<feedbackObj.length;i++)
+              -var active = i == 0 ? 'active':''
+              li.feedback__carousel__container__dots__dot(data-index=i class=active)
 
 
     section.plans
