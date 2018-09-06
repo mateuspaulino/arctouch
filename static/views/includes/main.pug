@@ -63,7 +63,33 @@
         .about__container__video
           iframe(src="https://player.vimeo.com/video/20385982?title=0&byline=0&portrait=0" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
     section.feedback
-      .feedback__carousel.carousel-container
+      .feedback__carousel
+        .feedback__carousel__container
+          - 
+            var feedbackObj = [{
+              comment: '"Houston, we have a problem"',
+              author: 'John Swigert, Apollo 13',
+            },
+            {
+              comment: '"With great power there must also come – great responsibility."',
+              author: 'Amazing Fantasy #15',
+            },
+            {
+              comment: '"I find your lack of faith disturbing."',
+              author: 'Darth Vader, Star Wars',
+            },
+            {
+              comment: '"Try not. Do, or do not. There is no try."',
+              author: 'Yoda, The Empire Strikes Back',
+            }];
+          ul.feedback__carousel__container__list
+            li.feedback__carousel__container__list__item
+              h4.feedback__carousel__container__list__item__comment “Craze is one of the most complete app packages I have ever come across. I would highly reccomend it to anyone!”
+              p.feedback__carousel__container__list__item__author Sarah Hunt
+          ul.feedback__carousel__container__dots
+            -for(var x=0;x<feedbackObj.length;x++)
+              li.feedback__carousel__container__dots__dot 
+
     section.plans
       .plans__container
         header.plans__container__header

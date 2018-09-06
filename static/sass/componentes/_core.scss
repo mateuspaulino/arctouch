@@ -9,16 +9,15 @@ $gray-icon: #d4d4d4;
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 //closest to Myriad Pro
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 
 $fp: 'Pacifico', cursive;
 $fh: Helvetica , Arial, sans-serif;
 $fm: 'Myriad Pro' , 'PT Sans', sans-serif;
-$fs: 'Montserrat', 'PT Sans', sans-serif;
 
 $desktop-width: 1200px;
 $header-width: 1000px;
 $tablet-width: 1024px;
+$carousel-width: 1040px;
 $feature-one-column: 714px;
 $plans-two-columns: 1170px;
 $mobile-width: 640px;
@@ -322,7 +321,61 @@ $mobile-width-small-devices: 460px;
 		}
 	}
 	.feedback{
-		min-height: 200px;
+		// min-height: 290px;
+		box-sizing: border-box;
+		padding: 60px 20px;
+		width: 100%;
+		max-width: $carousel-width;
+		margin: 0 auto;
+		&__carousel{
+			&__container{
+				&__list{
+					&__item{
+						text-align: center;
+						&__comment{
+							font-family: $fh;
+							font-size: 25px;
+							line-height: 32px;
+							font-style: italic;
+							color: $gray;
+							margin-bottom: 25px;
+							@media screen and (max-width: $tablet-width) {
+								font-size: 20px;
+								margin-bottom: 20px;
+							}
+						}
+						&__author{
+							font-family: $fm;
+							font-size: 18px;
+							font-weight: 700;
+							color: $black-smooth;
+						}
+					}
+				}
+				&__dots{
+					display: flex;
+					justify-content: center;
+					flex-wrap: wrap;
+					margin-top: 50px;
+					&__dot{
+						width: 12px;
+						height: 12px;
+						border-radius: 50%;
+						border: 3px solid $blue;
+						margin: 5px 3px;
+						cursor: pointer;
+						@media screen and (max-width: $mobile-width){
+							width: 18px;
+							height: 18px;
+							margin: 7px 8px;
+						}
+						&.active{
+							background: $blue;
+						}
+					}
+				}
+			}
+		}
 	}
 	.plans{
 		background: $gray-bg;
@@ -578,7 +631,7 @@ $mobile-width-small-devices: 460px;
 					content: '';
 					position: absolute;
 					top: 9px;
-					left: -10px;;
+					left: -10px;
 					width: 5px;
 					height: 5px;
 					border-radius: 50%;
