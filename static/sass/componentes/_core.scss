@@ -4,6 +4,7 @@ $black-smooth: #222222;
 $gray: #848484;
 $gray-bg: #e7e7e7;
 $gray-border: #e5e5e5;
+$gray-icon: #d4d4d4;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 //closest to Myriad Pro
@@ -466,6 +467,79 @@ $mobile-width-small-devices: 460px;
 					// 		border-bottom: 1px solid $gray-border;
 					// 	}
 					// }
+				}
+			}
+		}
+	}
+	.contact{
+		padding: 0 20px 60px 20px;
+		max-width: 1020px;
+		margin: 120px auto 0 auto;
+		text-align: center;
+		&__title{
+			font-family: $fm;
+			font-size: 30px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			color: $black-smooth;
+		}
+		&__description{
+			font-family: $fh;
+			font-size: 16px;
+			line-height: 26px;
+			color: $gray;
+		}	
+		&__social{
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+			&__item{
+				cursor: pointer;
+				width: 34px;
+				height: 34px;
+				border-radius: 50%;
+				background: $gray-icon;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 5px;
+				transition: all 0.3s ease-in-out;
+				&:hover{
+					background: $blue;
+				}
+			}
+		}
+		@media screen and (max-width: $tablet-width){
+			&__title{
+				font-size: 26px;
+				margin-bottom: 20px;
+			}
+			&__description{
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+	}
+	.footer{
+		padding: 60px 20px 60px 20px;
+		text-align: center;
+		background: $gray-bg;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&__nav__list__item{
+			display: inline-block;
+			margin: 0 15px;
+			a{
+				font-family: $fh;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 26px;
+				color: $gray;
+				text-decoration: none;
+				transition: all 0.3s ease-in-out;
+				&:hover{
+					text-decoration: underline;
 				}
 			}
 		}

@@ -107,7 +107,7 @@
 
     section.contact
       h3.contact__title Say Hi & Get in Touch
-          p.contact__description Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendisse. 
+      p.contact__description Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendisse. 
       ul.contact__social
         - 
           var socialObj = [{
@@ -140,3 +140,9 @@
               img(src="../img/icons/social/"+socialObj[x].icon alt=socialObj[x].name)
             
   footer.footer
+    -var menu = ["Contact","Download","Press","Email","Support","Privacy Policy"];
+    nav.footer__nav
+      ul.footer__nav__list
+        -for(var x=0; x<menu.length; x++)
+          li.footer__nav__list__item
+            a(href="https://arctouch.com/" target="_BLANK" title=menu[x]) #{menu[x]}
