@@ -9,27 +9,34 @@ async function init() {
   const $$ = document.querySelectorAll.bind(document);
 
   //init variables
-  // let slideActual = 0;
+  let currentSlide = 0;
+  let automaticSlide = true;
+  // let automaticInterval = setInterval(function(){goToNextSlide();}, 1000);
 
   //DOM elements
   let slide = $$('.feedback__carousel__container__list__item');
   let slideActivated = document.getElementsByClassName('feedback__carousel__container__list__item active');
 
-  const showSlide = (number) => {
+  //Shows to the specific slide
+  let showSlide = (number) => {
     removeClass(slideActivated,'active');
     slide[number].classList.add('active');
+    currentSlide++;
   }
 
-  //recursive function
-  // const removeClass = (elements, className) => {
-  //   //elements must be a HTML collection
-  //   elements[0].classList.remove(className);
-  //   if (elements[0]){
-  //     removeClass(elements, className);
-  //   }
-  // }
+  //Go to the next slide
+  let goToNextSlide = () => {
+    showSlide(currentSlide+1);
+  }
 
-  showSlide(1);
+  //Go to the previous slide
+  let goToPreviousSlide = () => {
+    showSlide(currentSlide-1);
+  }
+
+  // Running tests
+  // goToNextSlide();
+  // showSlide(1);
 }
 
 init();
