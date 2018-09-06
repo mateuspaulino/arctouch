@@ -303,12 +303,35 @@
 		width: 100%;
 		max-width: $carousel-width;
 		margin: 0 auto;
+		overflow: auto;
 		&__carousel{
 			&__container{
+				width: 100%;
 				&__list{
+					position: relative;
+					height: 120px;
+					// display: flex;
+					// align-items: center;
 					&__item{
+						position: absolute;
+						top: 0;
+						display: inline-block;
 						text-align: center;
+						width: 100%;
+						height: 100%;
+						display: flex;
+						flex-wrap: wrap;
+						align-items: center;
+						background: white;
+						opacity: 0;
+						z-index: 10;
+						transition: all 0.3s ease-in-out;
+						&.active{
+							opacity: 1;
+							z-index: 20;	
+						}
 						&__comment{
+							width: 100%;
 							font-family: $fh;
 							font-size: 25px;
 							line-height: 32px;
@@ -321,6 +344,7 @@
 							}
 						}
 						&__author{
+							width: 100%;
 							font-family: $fm;
 							font-size: 18px;
 							font-weight: 700;
