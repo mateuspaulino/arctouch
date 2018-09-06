@@ -20,6 +20,7 @@ $desktop-width: 1200px;
 $header-width: 1000px;
 $tablet-width: 1024px;
 $feature-one-column: 714px;
+$plans-two-columns: 1155px;
 $mobile-width: 640px;
 $mobile-width-small-devices: 460px;
 
@@ -439,34 +440,52 @@ $mobile-width-small-devices: 460px;
 						}
 					}
 				}
-				@media screen and (max-width: $tablet-width){
-					// li{
-					// 	padding: 25px 0;
-					// 	margin: 0 10px;
-					// 	border-bottom: 1px solid $gray-border;
-					// 	 &:nth-child(5),{
-					// 		border-bottom: none;
-					// 	}
-					// 	&:hover{
-					// 		background: none;
-					// 	}
-					// 	h4{
-					// 		font-size: 20px;
-					// 		margin: 18px 0;
-					// 	}
-					// 	p{
-					// 		font-size: 14px;
-					// 		line-height: 24px;
-					// 	}
-					// }
-				}
-				@media screen and (max-width: $feature-one-column){
-					// margin-top: 25px;
-					// li{
-					// 	 &:nth-child(5){
-					// 		border-bottom: 1px solid $gray-border;
-					// 	}
-					// }
+			}
+		}
+		@media screen and (max-width: $plans-two-columns){
+			height: auto;
+			&__container{
+				box-sizing: border-box;
+				padding: 60px 20px 60px 20px;
+				&__list{
+					padding-top: 60px;
+					display: flex;
+					flex-wrap: wrap;
+					align-items: flex-start;
+					justify-content: space-around;
+					&__item{
+						&:not(:last-child){
+							margin-bottom: 20px;
+						}
+						@media screen and (max-width: $tablet-width){
+							&__title{
+								font-size: 25px;
+								line-height: 55px;
+								height: 50px;
+							}
+							&__price{
+								font-size: 40px;
+								line-height: 40px;
+								padding: 15px 0 5px 0;
+							}
+							&__features{
+								padding: 0 20px;
+								&__item{
+									border-top: 1px solid $gray;
+									padding: 8px 0;
+									font-size: 14px;
+								}
+							}
+							&__purchase{
+								height: 60px;
+								&__button{
+									height: 35px;
+									font-size: 14px;
+									line-height: 35px;
+								}
+							}
+						}
+					}
 				}
 			}
 		}
