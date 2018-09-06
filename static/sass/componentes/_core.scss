@@ -1,16 +1,19 @@
 $blue: #3498db;
 $blue-dark: #0d74b9;
+$black-smooth: #222222;
 $gray: #848484;
 $gray-bg: #e7e7e7;
 $gray-border: #e5e5e5;
 
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 //closest to Myriad Pro
-@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 
 $fp: 'Pacifico', cursive;
 $fh: Helvetica , Arial, sans-serif;
 $fm: 'Myriad Pro' , 'PT Sans', sans-serif;
+$fs: 'Montserrat', 'PT Sans', sans-serif;
 
 $desktop-width: 1200px;
 $header-width: 1000px;
@@ -126,6 +129,7 @@ $mobile-width-small-devices: 460px;
 				font-size: 30px;
 				font-weight: 700;
 				margin-bottom: 25px;
+				color: $black-smooth;
 			}
 			p{
 				font-family: $fh;
@@ -172,6 +176,7 @@ $mobile-width-small-devices: 460px;
 					font-size: 24px;
 					font-weight: 700;
 					margin: 28px 0;
+					color: $black-smooth;
 				}
 				p{
 					font-family: $fh;
@@ -231,6 +236,7 @@ $mobile-width-small-devices: 460px;
 					font-size: 30px;
 					font-weight: 700;
 					margin-bottom: 25px;
+					color: $black-smooth;
 				}
 				p{
 					font-family: $fh;
@@ -309,6 +315,157 @@ $mobile-width-small-devices: 460px;
 					iframe{
 						height: 200px;
 					}
+				}
+			}
+		}
+	}
+	.feedback{
+		min-height: 200px;
+	}
+	.plans{
+		background: $gray-bg;
+		height: 640px;
+		box-sizing: border-box;
+		&__container{
+			width: 100%;
+			max-width: $desktop-width;
+			margin: 0 auto;
+			box-sizing: border-box;
+			padding: 60px 10px 60px 10px;
+			&__header{
+				max-width: 1020px;
+				margin: 0 auto;
+				text-align: center;
+				&__title{
+					font-family: $fm;
+					font-size: 30px;
+					font-weight: 700;
+					margin-bottom: 25px;
+					color: $black-smooth;
+				}
+				&__description{
+					font-family: $fh;
+					font-size: 16px;
+					line-height: 26px;
+					color: $gray;
+				}
+				@media screen and (max-width: $tablet-width){
+					&__title{
+						font-size: 26px;
+						margin-bottom: 20px;
+					}
+					&__description{
+						font-size: 14px;
+						line-height: 24px;
+					}
+				}
+			}
+			&__list{
+				padding-top: 60px;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				&__item{
+					box-sizing: border-box;
+					width: 100%;
+					max-width: 280px;
+					text-align: center;
+					transition: all 0.2s ease-in-out;
+					background: $blue;
+					margin: 0 2px;
+					&__title{
+						font-family: $fm;
+						font-size: 28px;
+						line-height: 60px;
+						font-weight: 600;
+						letter-spacing: 0.5px;
+						height: 55px;
+						color: white;
+					}
+					&__price{
+						font-family: $fm;
+						letter-spacing: -2px;
+						font-weight: 800;
+						font-size: 42px;
+						line-height: 42px;
+						color: $black-smooth;
+						padding: 18px 0 8px 0;
+						background: white;
+						span{
+							letter-spacing: 0px;
+							font-size: 24px;
+							position: relative;
+							top: -11px;
+							right: -5px;
+						}
+					}
+					&__features{
+						background: white;
+						box-sizing: border-box;
+						padding: 0 20px;
+						&__item{
+							border-top: 1px solid $gray;
+							padding: 10px 0;
+							font-family: $fh;
+							font-size: 16px;
+							line-height: 24px;
+							color: $gray;
+						}
+					}
+					&__purchase{
+						height: 80px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						&__button{
+							display: inline-block;
+							width: 137px;
+							height: 40px;
+							background: $blue-dark;
+							text-transform: uppercase;
+							color: white;
+							font-family: $fm;
+							font-weight: bold;
+							letter-spacing: 0.5px;
+							font-size: 15px;
+							line-height: 42px;
+							transition: all 0.2s ease-in-out;
+							text-decoration: none;
+							&:hover{
+								transform: scale(1.1);
+							}
+						}
+					}
+				}
+				@media screen and (max-width: $tablet-width){
+					// li{
+					// 	padding: 25px 0;
+					// 	margin: 0 10px;
+					// 	border-bottom: 1px solid $gray-border;
+					// 	 &:nth-child(5),{
+					// 		border-bottom: none;
+					// 	}
+					// 	&:hover{
+					// 		background: none;
+					// 	}
+					// 	h4{
+					// 		font-size: 20px;
+					// 		margin: 18px 0;
+					// 	}
+					// 	p{
+					// 		font-size: 14px;
+					// 		line-height: 24px;
+					// 	}
+					// }
+				}
+				@media screen and (max-width: $feature-one-column){
+					// margin-top: 25px;
+					// li{
+					// 	 &:nth-child(5){
+					// 		border-bottom: 1px solid $gray-border;
+					// 	}
+					// }
 				}
 			}
 		}

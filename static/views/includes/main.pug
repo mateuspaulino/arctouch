@@ -64,5 +64,79 @@
           iframe(src="https://player.vimeo.com/video/20385982?title=0&byline=0&portrait=0" width="100%" height="300" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
     section.feedback
       .feedback__carousel.carousel-container
+    section.plans
+      .plans__container
+        header.plans__container__header
+          h3.plans__container__header__title Pricing Plans
+          p.plans__container__header__description Lorem ipsum dolor sit amet, pro aeterno adipisci ex, pro no iriure accusam. Eros admodum intellegat ex mea, mei wisi nullam ne, qui cu aliquid nominavi. Est habemus maiestatis ut. Vim quod elitr interesset ea.
 
+          - 
+            var plansObj = [{
+              plan: 'Basic',
+              price: '$19',
+              cents: '99',
+            },
+            {
+              plan: 'Standard',
+              price: '$39',
+              cents: '99',
+            },
+            {
+              plan: 'Deluxe',
+              price: '$59',
+              cents: '99',
+            },
+            {
+              plan: 'Unlimited',
+              price: '$79',
+              cents: '99',
+            }];
+            
+        ul.plans__container__list
+          -for(var x=0; x<plansObj.length; x++)
+            li.plans__container__list__item
+              h4.plans__container__list__item__title #{plansObj[x].plan}
+              p.plans__container__list__item__price #{plansObj[x].price}#[span #{plansObj[x].cents}]
+              ul.plans__container__list__item__features
+                -for(var i=1; i<=5; i++)
+                  li.plans__container__list__item__features__item Feature #{i}
+                -if(x==2)
+                  li.plans__container__list__item__features__item Feature 6
+              .plans__container__list__item__purchase
+                a.plans__container__list__item__purchase__button(href="https://arctouch.com/contact/" target="_BLANK" title="Purchase") Purchase
+
+    section.contact
+      h3.contact__title Say Hi & Get in Touch
+          p.contact__description Lorem ipsum dolor sit amet, consectetur adipiscing elit suspendisse. 
+      ul.contact__social
+        - 
+          var socialObj = [{
+            icon: 'twitter.png',
+            name: 'Twitter',
+          },
+          {
+            icon: 'facebook.png',
+            name: 'Facebook',
+          },
+          {
+            icon: 'pinterest.png',
+            name: 'Pinterest',
+          },
+          {
+            icon: 'gplus.png',
+            name: 'Google plus',
+          },
+          {
+            icon: 'linkedin.png',
+            name: 'LinkedIn',
+          },
+          {
+            icon: 'youtube.png',
+            name: 'Youtube',
+          }];
+        -for(var x=0; x<socialObj.length; x++)
+          li.contact__social__item
+            a(href="https://arctouch.com/portfolio/" target="_BLANK" title=socialObj[x].name)
+              img(src="../img/icons/social/"+socialObj[x].icon alt=socialObj[x].name)
+            
   footer.footer
