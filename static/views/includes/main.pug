@@ -84,20 +84,24 @@
             }];
           ul.feedback__carousel__container__list
             li.feedback__carousel__container__list__item.active
-              h4.feedback__carousel__container__list__item__comment “Craze is one of the most complete app packages I have ever come across. I would highly reccomend it to anyone!”
+              h4.feedback__carousel__container__list__item__comment 1
               p.feedback__carousel__container__list__item__author Sarah Hunt
-            li.feedback__carousel__container__list__item.active
-              h4.feedback__carousel__container__list__item__comment Phrase 3
+            li.feedback__carousel__container__list__item
+              h4.feedback__carousel__container__list__item__comment 2
               p.feedback__carousel__container__list__item__author Mateus Pauliasdasno
-            li.feedback__carousel__container__list__item.active
-              h4.feedback__carousel__container__list__item__comment Phrase 4
+            li.feedback__carousel__container__list__item
+              h4.feedback__carousel__container__list__item__comment 3
               p.feedback__carousel__container__list__item__author Mateusaaa Paulino
-            li.feedback__carousel__container__list__item.active
-              h4.feedback__carousel__container__list__item__comment Phrase 5
+            li.feedback__carousel__container__list__item
+              h4.feedback__carousel__container__list__item__comment 4
               p.feedback__carousel__container__list__item__author Mateus aaaPaulino
           ul.feedback__carousel__container__dots
             -for(var x=0;x<feedbackObj.length;x++)
-              li.feedback__carousel__container__dots__dot 
+              if(x==0)
+                li.feedback__carousel__container__dots__dot.active 
+              else
+                li.feedback__carousel__container__dots__dot
+
 
     section.plans
       .plans__container
