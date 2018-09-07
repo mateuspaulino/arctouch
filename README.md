@@ -13,8 +13,15 @@ The project was structured to be accessible from the most varied devices and the
 * No CSS framework
 * No JavaScript framework
 * Semantic HTML
-* SEO optmization
+* SEO tags
 
+## Carousel
+The auto rotate stops on click
+- [x] Animate slide transition
+- [x] Slides should auto rotate after 4 seconds
+- [x] User should be able to navigate between slides
+- [x] Auto rotate should be disabled once user has interacted
+ 
 ## How to run the project
 - Clone the repository, switch to branch *challenge*
 - Inside the folder, run the following commands. You need to have (Node.js and Yarn/npm) installed.
@@ -26,13 +33,14 @@ $ make start
 ```
 - That is it! The project is running
 
-## Carousel
-The auto rotate stops on click
-- [x] Animate slide transition
-- [x] Slides should auto rotate after 4 seconds
-- [x] User should be able to navigate between slides
-- [x] Auto rotate should be disabled once user has interacted
- 
+## How to run the tests
+- Inside the folder, on branch *challenge*, run the following command
+```sh
+$ make test
+```
+## Source code
+- On the branch *Challenge*, [here](https://github.com/mateuspaulino/arctouch/tree/challenge)
+
 ## License
 
 Copyright (c) 2018 Mateus Paulino
