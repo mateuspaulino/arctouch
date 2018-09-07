@@ -41,11 +41,11 @@ $ make test
 ## Source code
 - On the branch *Challenge*, [here](https://github.com/mateuspaulino/arctouch/tree/challenge)
 
-## Desktop screenshots
+## Desktop screenshot
 ![alt text](https://github.com/mateuspaulino/arctouch/blob/master/arctouch-page.png)
 
-## Mobile gif
-![alt text](https://github.com/mateuspaulino/arctouch/blob/master/mobile-gif.gif)
+## Mobile screenshot
+![alt text](https://github.com/mateuspaulino/arctouch/blob/master/arctouch-page-mobile.png)
 
 ## License
 
