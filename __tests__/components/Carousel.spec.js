@@ -1,9 +1,9 @@
 import Carousel from '../../src/components/Carousel';
 
-describe("Carousel", () => {
+describe('Carousel', () => {
     describe('ToBeDefined', () => {
         it('should exist carousel method', () => {
-          expect(Carousel).toBeDefined();
+            expect(Carousel).toBeDefined();
         });
     });
     describe('ToBeFunction', () => {
