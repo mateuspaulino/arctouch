@@ -1,15 +1,19 @@
 # ArcTouch
+The project is a Single Page Application and was developed for ArcTouch's 'challenge coding'.
 
-## Description
-
+## Characteristics
+The project was structured to be accessible from the most varied devices and the HTML tags are respecting semantics, helping accessibility. All components were built separately (using the BEM methodology), in a responsive way, to reach the mobile devices. JavaScript code was built without the use of libraries or frameworks. It was splitted in functions, avoiding manipulations and access to the DOM.
 
 ## Technical specifications
-* Webpack
-* ES6
-* Pug
-* Sass
+* Webpack - Task runner
+* ES6 - ECMAScript
+* Pug - Template engine
+* Sass - CSS pre-processor
+* BEM - Component's methodology
 * No CSS framework
 * No JavaScript framework
+* Semantic HTML
+* SEO optmization
 
 ## How to run the project
 - Clone the repository, switch to branch *challenge*
@@ -22,11 +26,12 @@ $ make start
 ```
 - That is it! The project is running
 
-## How to run the tests
-- Inside the folder, on branch *challenge*, run the following command
-```sh
-$ make test
-```
+## Carousel
+The auto rotate stops on click
+- [x] Animate slide transition
+- [x] Slides should auto rotate after 4 seconds
+- [x] User should be able to navigate between slides
+- [x] Auto rotate should be disabled once user has interacted
  
 ## License
 
