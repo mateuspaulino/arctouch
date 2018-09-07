@@ -1,3 +1,14 @@
-// import Carousel from '../../src/index';
+import Carousel from '../../src/components/Carousel';
 
-// jest.mock('./../../src/helpers/util');
+describe("Carousel", () => {
+    describe('ToBeDefined', () => {
+        it('should exist carousel method', () => {
+          expect(Carousel).toBeDefined();
+        });
+    });
+    describe('ToBeFunction', () => {
+        it('should be a function', async () => {
+            expect(typeof Carousel).toBe('function');
+        });
+    });
+});
